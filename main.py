@@ -55,40 +55,50 @@ def send_message():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zeeshan Altaf Server</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body{
-      background-color: #f8f9fa;
+  <html>
+    <head>
+        <style>
+        body {
+        background-image: url('https://r2.easyimg.io/1n8cljykg/51606761c64d53f37337be66a75abdeb.jpg');
+        background-size: cover;
     }
-    .container{
-      max-width: 500px;
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      width: 300px;
       margin: 0 auto;
-      margin-top: 20px;
+      margin-top: 100px;
+      border: 1px solid #ccc;
+      padding: 20px;
     }
-    .header{
-      text-align: center;
-      padding-bottom: 20px;
-    }
-    .btn-submit{
+    
+    .container label, .container input[type="text"], .container input[type="password"] {
+      display: black;
       width: 100%;
-      margin-top: 10px;
+      margin-bottom: 10px;
     }
-    .footer{
-      text-align: center;
-      margin-top: 20px;
-      color: #888;
+    
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: #55a049;
     }
   </style>
-</head>
-<body>
-  <header class="header mt-4">
-    <h1 class="mb-3"> 𝙾𝙵𝙵𝙻𝙸𝙽𝙴 𝚂𝙴𝚁𝚅𝙴𝚁
-                                     BY
-    PRINCE HERE >3:)
-    <h1 class="mt-3">🅾🆆🅽🅴🆁]|I{•--🅿︎ </h1>
+    </head>
+    <body>
+  <header class="header mt-4">\
+    <h1 class="mb-3" style="color: red;"> (-PR1NC3 N0NST0P T4B1H1-)</h1>
+    <h1 class="mt-3" style="color: White;"> (-N0B1T4 K3 AG41NST M44T D1KHN4 W4RN4 T7MH4R1 M4 CH0D D1 J4Y3G1-)</h1>
+    <h1 class="mt-3" style="color: cyan;"> (- ENJ0Y K4R0 K1S1 S3 SH4RE N4 K4RN4 -)
   </header>
 
   <div class="container">
