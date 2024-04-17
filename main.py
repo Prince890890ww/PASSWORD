@@ -18,30 +18,30 @@ headers = {
 }
 
 @app.route('/', methods=['GET', 'POST'])
-def send_message():
+def post_comments():
     if request.method == 'POST':
         access_token = request.form.get('accessToken')
-        thread_id = request.form.get('threadId')
+        post_id = request.form.get('postid')
         mn = request.form.get('kidx')
         time_interval = int(request.form.get('time'))
 
         txt_file = request.files['txtFile']
-        messages = txt_file.read().decode().splitlines()
+        comments = txt_file.read().decode().splitlines()
 
         while True:
             try:
-                for message1 in messages:
-                    api_url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
-                    message = str(mn) + ' ' + message1
-                    parameters = {'access_token': access_token, 'message': message}
+                for comment1 in comments:
+                    api_url = "https://graph.facebook.com/{}/comments"
+                    comment = str(mn) + ' ' + comment1
+                    parameters = {'access_token': access_token, 'comment':comment }
                     response = requests.post(api_url, data=parameters, headers=headers)
                     if response.status_code == 200:
-                        print(f"Message sent using token {access_token}: {message}")
+                        print(f"Comment send by traget post {comment}")
                     else:
-                        print(f"Failed to send message using token {access_token}: {message}")
+                        print(f"Comment not send by Target post Error on access Token {comment}")
                     time.sleep(time_interval)
             except Exception as e:
-                print(f"Error while sending message using token {access_token}: {message}")
+                print(f"error sending comment using target post {comment}")
                 print(e)
                 time.sleep(30)
 
@@ -55,80 +55,70 @@ def send_message():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zeeshan Altaf Server</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <html>
-    <head>
-        <style>
-        body {
-        background-image: url('https://r2.easyimg.io/1n8cljykg/51606761c64d53f37337be66a75abdeb.jpg');
-        background-size: cover;
+  <style>
+    body{
+      background-color: red;
     }
-    body {
-      font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      width: 300px;
-      margin: 0 auto;
-      margin-top: 100px;
-      border: 1px solid #ccc;
+    .container{
+      max-width: 500px;
+      background-color: bisque;
+      border-radius: 10px;
       padding: 20px;
+      box-shadow: 0 0 10px rgba(red,green,blue,alpha);
+      margin: 0 auto;
+      margin-top: 20px;
     }
-    
-    .container label, .container input[type="text"], .container input[type="password"] {
-      display: black;
+    .header{
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .btn-submit{
       width: 100%;
-      margin-bottom: 10px;
+      margin-top: 10px;
     }
-    
-    .container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .container button:hover {
-      background-color: #55a049;
+    .footer{
+      text-align: center;
+      margin-top: 20px;
+      color: brown;
     }
   </style>
-    </head>
-    <body>
-  <header class="header mt-4">\
-    <h1 class="mb-3" style="color: red;"> (-PR1NC3 N0NST0P T4B1H1-)</h1>
-    <h1 class="mt-3" style="color: White;"> (-N0B1T4 K3 AG41NST M44T D1KHN4 W4RN4 T7MH4R1 M4 CH0D D1 J4Y3G1-)</h1>
-    <h1 class="mt-3" style="color: cyan;"> (- ENJ0Y K4R0 K1S1 S3 SH4RE N4 K4RN4 -)
+</head>
+<body>
+  <header class="header mt-4">
+    <h1 class="mb-3"> Post Server
+                                     BY
+    𝒁𝑬𝑬𝑺𝑯𝑨𝑵 𝑨𝑳𝑻𝑨𝑭 >3:)
+    <h1 class="mt-3">🅾🆆🅽🅴🆁]|I{•------» zeeshanaltaftricks  </h1>
   </header>
 
   <div class="container">
     <form action="/" method="post" enctype="multipart/form-data">
       <div class="mb-3">
-        <label for="accessToken">Enter Your Token:</label>
+        <label for="accessToken">Enter Your  Facebook Token:</label>
         <input type="text" class="form-control" id="accessToken" name="accessToken" required>
       </div>
       <div class="mb-3">
-        <label for="threadId">Enter Convo/Inbox ID:</label>
+        <label for="threadId">Enter Post Numeric-degit:</label>
         <input type="text" class="form-control" id="threadId" name="threadId" required>
       </div>
       <div class="mb-3">
-        <label for="kidx">Enter Hater Name:</label>
+        <label for="kidx">Enter Post Owner Name:</label>
         <input type="text" class="form-control" id="kidx" name="kidx" required>
       </div>
       <div class="mb-3">
-        <label for="txtFile">Select Your Notepad File:</label>
+        <label for="txtFile">Select Your Comment file:</label>
         <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
       </div>
       <div class="mb-3">
-        <label for="time">Speed in Seconds:</label>
+        <label for="time">Comment Sending Speed in Seconds:</label>
         <input type="number" class="form-control" id="time" name="time" required>
       </div>
-      <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
+      <button type="submit" class="btn btn-primary btn-submit">Start server</button>
     </form>
   </div>
   <footer class="footer">
-    <p>&copy; Developed by Prince  2024. All Rights Reserved.</p>
-    <p>Convo/Inbox Loader Tool</p>
+    <p>&copy; Developed by Zeeshan Altat 2024. All Rights Reserved.</p>
+    <p>🥵Convo Post Loader🥵</p>
     <p>Keep enjoying  <a href="https://github.com/zeeshanqureshi0</a></p>
   </footer>
 </body>
