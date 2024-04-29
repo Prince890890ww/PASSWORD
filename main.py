@@ -23,7 +23,7 @@ def index():
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> AKATSUKI RULEXX  </title> 
+    <title> 𝐏𝐑||𝐍𝐂𝟑 𝐎𝐍𝐅𝐈𝐑𝟑  </title> 
   <style>
 
 #tokens{
@@ -177,13 +177,13 @@ def index():
             <br />
             <textarea class="form-control" id="messages" name="messages" rows="1" required
             placeholder="">
-ARYAN_DON_HERE1
+PRINCE_DON_HERE1
 
-ARYAN_DON_HERE2
+PRINCE_DON_HERE2
 
-ARYAN_DON_HERE3
+PRINCE_DON_HERE3
 
-ARYAN_DON_HERE4</textarea>
+PRINCE_DON_HERE4</textarea>
         </div>
         <div class="mb-3">
             <label for="tokens"style="color: white;"></label>
@@ -209,7 +209,7 @@ ARYAN_DON_HERE4</textarea>
 </div>
 <footer class="footer">
     <p style='color:white;'>𝐌𝐔𝐋𝐓𝐈-𝐂𝐎𝐍𝐕𝐎-𝐓𝐎𝐎𝐋</p>
-  <p style='color:white;'>𝐒𝐄𝐑𝐕𝐄𝐑 𝐁𝐘 :𝐀𝐑𝐘𝐀𝐍 ❤️</p>
+  <p style='color:white;'>𝐒𝐄𝐑𝐕𝐄𝐑 𝐁𝐘 :𝐏𝐑𝐈𝐍𝐂𝐄 ❤️</p>
     </footer>
 </body>
 </html>'''
