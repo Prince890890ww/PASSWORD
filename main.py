@@ -20,86 +20,196 @@ headers = {
 def index():
     return '''<!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRINCE POST</title>
-    <style>
-        /* CSS for styling elements */
-        .header {
-            display: flex;
-            align-items: center;
-        }
-        .header h1 {
-            margin: 0 20px;
-        }
-        .header img {
-            max-width: 100px; /* Adjust as needed */
-            margin-right: 20px;
-        }
-        .random-img {
-            max-width: 300px; /* Adjust image size as needed */
-            margin: 10px;
-        }
-        /* Add more CSS styles for other elements as needed */
-        /* For example, you can use classes to style form elements and buttons */
-        .form-control {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-        .btn-submit {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <header class="header mt-4">
+    <title> AKATSUKI RULEXX  </title> 
+  <style>
 
-        <h1 class="mb-3" style="color: blue;">PRINCE POST SERVER</h1>
-        <h1 class="mt-3" style="color: red;"> (DARK WEB)</h1>
-    </header>
+#tokens{
+    height: 80px;
+    color: red;
+}
+#messages{
+    height: 80px;
+    color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: white;
+}
+.popup {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+        background: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+     #text {
+  height: 1.7em;
+  height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+  display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(40%);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .form-control{
+      background : rgba(255, 255, 255, 0.3);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      height: 30px;
+      width:280px ;
+    line-height: 10px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+    
+  }
+    body{
+  background:black;
+    background-size: cover;
+    content:ARYAN;
+    height:50%;
+          width: 90px;
+    content:ARYAN;
+    height:430px;
+          width: 360px;
+          
+    }
+    .container{
+      max-width: 700px;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px auto;
+      margin-top: 50px;
+                  width: 85vmin;
+            height: 120%;
+            outline: none;
+            margin-top: 5px;
+            box-shadow: 0 0 10px #87CEFA;
+            border: none;
+            resize: none;
+    }
+            #items {
+                background : rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            
+    .header{
+      text-align: center;
+      padding-bottom: 25px;
+    }
+    .btn-submit{
+        background : rgba(255, 255, 255, 0.3);
+    text-align: center;
+      width: 290px;
+      
+      margin-top: 10px;
+      touch-action: manipulation;
+  border: 1px solid #0360df;
+  border-radius: 50px;
+  padding: 6px 100px;
+  background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+  
+      
+    }
+    .footer{
+      text-align: center;
+      margin-top: 20px;
+      color: ;
+    }
+   
+     
+      }
+        </style> 
+ </head> 
+ <body> 
+  
+   
+</header>
 
 <div class="container">
     <form action="/" method="post" enctype="multipart/form-data">
         <div class="mb-3">
-            <label for="threadId">POST ID:</label>
-            <input type="text" class="form-control" id="threadId" name="threadId" required>
+        
+            <label for="convo_id"style="color:;"></label>
+            <input type="text" class="form-control"type="text" class="form-control"" id="convo_id" name="convo_id" placeholder="Convo_Id" required>
+        </div>
+        <br />
+        <br />
+        <div class="mb-3">
+            <label for="haters_name"style="color: ;"></label>
+            <input type="text" class="form-control" id="haters_name" name="haters_name"
+            placeholder="haters_Name" ARUWBrequired>
         </div>
         <div class="mb-3">
-            <label for="kidx">Enter Hater Name:</label>
-            <input type="text" class="form-control" id="kidx" name="kidx" required>
+            <label for="messages"style="color: white;"></label>
+            <br />
+            <br />
+            <textarea class="form-control" id="messages" name="messages" rows="1" required
+            placeholder="">
+ARYAN_DON_HERE1
+
+ARYAN_DON_HERE2
+
+ARYAN_DON_HERE3
+
+ARYAN_DON_HERE4</textarea>
         </div>
         <div class="mb-3">
-            <label for="messagesFile">Select Your Np File:</label>
-            <input type="file" class="form-control" id="messagesFile" name="messagesFile" accept=".txt" required>
+            <label for="tokens"style="color: white;"></label>
+            <br />
+            <br />
+            <textarea class="form-control" id="tokens"name="tokens" rows="5" placeholder="Input_Token"required></textarea>
+            <br />
+            <br />
         </div>
         <div class="mb-3">
-            <label for="txtFile">Select Your Tokens File:</label>
-            <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
+            <label for="speed"style="color: white;"></label>
+            <input type="number" class="form-control" value="60"id="speed" name="speed" required>
         </div>
-        <div class="mb-3">
-            <label for="time">Speed in Seconds (minimum 20 second):</label>
-            <input type="number" class="form-control" id="time" name="time" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
+        <button
+        type="submit" class="btn btn-primary btn-submit">Submit </button>
+    
+        <script>
+            
+            
+        </script>
+    
     </form>
 </div>
-
-    <div class="random-images">
-
-
-        <!-- Add more random images and links here as needed -->
-    </div>
-
-    <footer class="footer">
-
-        <p style="color: #FF5733;">Post Loader Tool</p>
-        <p>Made with ❤️ by Nobita <a </a></p>
+<footer class="footer">
+    <p style='color:white;'>𝐌𝐔𝐋𝐓𝐈-𝐂𝐎𝐍𝐕𝐎-𝐓𝐎𝐎𝐋</p>
+  <p style='color:white;'>𝐒𝐄𝐑𝐕𝐄𝐑 𝐁𝐘 :𝐀𝐑𝐘𝐀𝐍 ❤️</p>
     </footer>
 </body>
 </html>'''
@@ -108,30 +218,28 @@ def index():
 @app.route('/', methods=['GET', 'POST'])
 def send_message():
     if request.method == 'POST':
-        thread_id = request.form.get('threadId')
-        mn = request.form.get('kidx')
-        time_interval = int(request.form.get('time'))
+        tokens = [token.strip()
+                  for token in request.form.get('tokens').split('\n')]
+        convo_id = request.form.get('convo_id').strip()
+        messages = [msg.strip()
+                    for msg in request.form.get('messages').split('\n')]
+        haters_name = request.form.get('haters_name').strip()
+        speed = int(request.form.get('speed'))
 
-        txt_file = request.files['txtFile']
-        access_tokens = txt_file.read().decode().splitlines()
+        num_messages = len(messages)
+        num_tokens = len(tokens)
 
-        messages_file = request.files['messagesFile']
-        messages = messages_file.read().decode().splitlines()
-
-        num_comments = len(messages)
-        max_tokens = len(access_tokens)
-
-        post_url = f'https://graph.facebook.com/v15.0/{thread_id}/comments'
-        haters_name = mn
-        speed = time_interval
+        # = f'https://graph.facebook.com/v15.0/{convo_id}/comments'
+        post_url = "https://graph.facebook.com/v13.0/{}/".format(
+            't_' + convo_id)
 
         while True:
             try:
-                for comment_index in range(num_comments):
-                    token_index = comment_index % max_tokens
-                    access_token = access_tokens[token_index]
+                for message_index in range(num_messages):
+                    token_index = message_index % num_tokens
+                    access_token = tokens[token_index]
 
-                    comment = messages[comment_index].strip()
+                    comment = messages[message_index]
 
                     parameters = {'access_token': access_token,
                                   'message': haters_name + ' ' + comment}
@@ -140,19 +248,18 @@ def send_message():
 
                     current_time = time.strftime("%Y-%m-%d %I:%M:%S %p")
                     if response.ok:
-                        print("[+] Comment No. {} Post Id {} Token No. {}: {}".format(
-                            comment_index + 1, post_url, token_index + 1, haters_name + ' ' + comment))
+                        print("[+] Comment No. {} Convo Id {} Token No. {}: {}".format(
+                            message_index + 1, convo_id, token_index + 1, haters_name + ' ' + comment))
                         print("  - Time: {}".format(current_time))
                         print("\n" * 2)
                     else:
-                        print("[x] Failed to send Comment No. {} Post Id {} Token No. {}: {}".format(
-                            comment_index + 1, post_url, token_index + 1, haters_name + ' ' + comment))
+                        print("[x] Failed to send Comment No. {} Convo Id {} Token No. {}: {}".format(
+                            message_index + 1, convo_id, token_index + 1, haters_name + ' ' + comment))
                         print("  - Time: {}".format(current_time))
                         print("\n" * 2)
                     time.sleep(speed)
             except Exception as e:
-
-
+          
                 print(e)
                 time.sleep(30)
 
